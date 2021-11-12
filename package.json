@@ -1,0 +1,20 @@
+{
+  "name": "dev-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "enquirer": "^2.3.6",
+    "node-fetch": "^3.1.0"
+  },
+  "type": "module",
+  "bin": {
+    "graphql": "./index.js"
+  }
+}
