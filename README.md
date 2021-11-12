@@ -5,3 +5,5 @@ _Jonas had to reinvent wheels again. You might want to use a non-buggy more feat
 Can be installed through `apt install vim && npm ci && sudo npm link`. Afterwards `graphql` can be run everywhere.
 
 In multi selects, space can be used to select entries, `a` to toggle all and enter to submit. 
+
+![Examples](./examples.png)
