@@ -1,0 +1,41 @@
+#authToken: authtokenS1
+query { 
+  me { 
+    firstname
+    lastname
+    email
+   
+    student { 
+      newsletter
+      subjectsFormatted { name grade { min max } }
+      openMatchRequestCount
+      state
+      university
+      module
+      moduleHours
+      languages
+      
+      openProjectMatchRequestCount
+      
+      participationCertificates { 
+      	subjectsFormatted
+        categories
+        startDate
+        endDate
+        hoursPerWeek
+        hoursTotal
+        medium
+        ongoingLessons
+        state
+      }
+      
+      matches { 
+      	dissolved
+        proposedTime
+        pupil { firstname lastname }
+      }
+      
+      canRequestMatch { allowed reason limit }
+    }
+  }
+}

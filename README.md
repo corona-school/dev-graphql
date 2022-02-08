@@ -7,3 +7,11 @@ Can be installed through `apt install vim && npm ci && sudo npm link`. Afterward
 In multi selects, space can be used to select entries, `a` to toggle all and enter to submit. 
 
 ![Examples](./examples.png)
+
+### Usage
+
+```
+graphql                  - Starts the CLI in interactive mode
+graphql load <file>.gql  - Starts the CLI with loading / running the query in the file, can then be edited
+graphql run  <file>.gql  - Directly runs the Query and exits
+```

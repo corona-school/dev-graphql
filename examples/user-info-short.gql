@@ -1,0 +1,3 @@
+query {
+  me { firstname lastname email }
+}

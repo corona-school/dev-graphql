@@ -1,0 +1,66 @@
+#authToken: authtokenP1
+query { 
+  me { 
+    firstname
+    lastname
+    email
+
+    pupil { 
+      state
+      learningGermanSince
+      languages
+  		schooltype
+      newsletter
+      registrationSource
+      
+      canRequestMatch { allowed reason limit}
+      openMatchRequestCount
+      gradeAsInt
+      subjectsFormatted { 
+        name
+      }
+      tutoringInterestConfirmation { 
+      	status
+        token
+      }
+      
+      participationCertificatesToSign { 
+      	id
+        subjects
+        categories
+        certificateDate
+        startDate
+        endDate
+        hoursPerWeek
+        hoursTotal
+        medium
+        ongoingLessons
+        state
+        startDate
+    
+      }
+      
+      matches { 
+      	dissolved
+        dissolveReason
+        proposedTime
+        student { firstname lastname }
+      }
+      
+      projectFields
+      openProjectMatchRequestCount
+
+      
+      teacherEmailAddress
+      
+      canJoinSubcourses { allowed reason limit }
+      subcoursesJoined { 
+      	course { name outline description }
+        minGrade
+        maxGrade
+        lectures { start duration }
+      }
+      
+    }
+  }
+}
