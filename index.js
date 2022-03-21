@@ -214,6 +214,11 @@ async function storeQueryToFile(queryString, name) {
 async function loadQuery() {
     const storedQueries = Object.keys(config.queries);
 
+    if (!storedQueries.length) {
+      console.log("No query stored in the config, create one!");
+      return;
+    }
+
     const name = await (new Select({ choices: storedQueries })).run();
 
     return executeQuery(config.queries[name], name);
@@ -412,10 +417,10 @@ async function buildMutation() {
             } else throw new Error(`Unknown Query type`);
         }
 
+	await login();
 
         while (true) {
 
-            console.clear();
             const op = await (new Select({
                 choices: [`create query`, `load query`, `create mutation`, `load mutation`]
             })).run();
